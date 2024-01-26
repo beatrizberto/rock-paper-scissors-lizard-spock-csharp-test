@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GameRockPaperScissorsLizardSpockAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3ef4b066591759669e66dd6cb96f215722db451c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+495595519e08812348fff64ecd905d71cab5c84b")]
 [assembly: System.Reflection.AssemblyProductAttribute("GameRockPaperScissorsLizardSpockAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GameRockPaperScissorsLizardSpockAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -10,6 +10,12 @@ namespace GameRockPaperScissorsLizardSpockAPI.Controllers
         [HttpGet("Play/{playerChoice}")]
         public ActionResult<string> Play(int playerChoice)
         {
+             if (playerChoice < 1 || playerChoice > 5)
+            {
+                return BadRequest("Uh-Oh! Invalid move. Please choose rock, paper, scissors, lizard or Spock. ò__ó");
+            }
+            
+            
             int computerChoice = GenerateComputerChoice();
             string result = DetermineResult(playerChoice, computerChoice);
 
@@ -57,7 +63,7 @@ namespace GameRockPaperScissorsLizardSpockAPI.Controllers
                 case 5:
                     return "Spock";
                 default:
-                    return "Unknown";
+                    return "Ivalid move";
             }
         }
     }
