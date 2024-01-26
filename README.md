@@ -37,6 +37,8 @@ Criado por Sam Kass e Karen Bryla e popularizado ao ser tema de episódio da sé
 
 ## Documentação da API
 
+Nessa versão, um jogador disputa contra o "computador". O jogador escolhe sua jogada, que é confrontada com a jogada do computador, gerada automaticamente.
+
 #### Escolha do jogador:
 
 ```http
@@ -50,7 +52,7 @@ Criado por Sam Kass e Karen Bryla e popularizado ao ser tema de episódio da sé
 | `3` | `int` | **Scissors** |
 | `4` | `int` | **Lizard** |
 | `5` | `int` | **Spock** |
-| `6` | `int` | **Invalid option** |
+| `qualquer outra opção` |  | **Invalid option** |
 
 ### Escolha do Computador:
 
@@ -63,11 +65,21 @@ Gerada automaticamente entre 1 e 5.
 | `4` | `int` | **Lizard** |
 | `5` | `int` | **Spock** |
 
-### Retorno:
+### Response body:
 
-* Em caso de empate: ${playerChoice + "vs" + computerChoice + " - It's a draw. Try again!"}
-* Em caso de vitória: ${playerChoice + "vs" + computerChoice + " - You win!"}
-* Em caso de derrota: ${playerChoice + "vs" + computerChoice + " - You loose..."}
+* Em caso de empate: 
+`"{playerChoice} vs {computerChoice} - It's a draw. Try again!"`
+* Em caso de vitória:
+`"{playerChoice} vs {computerChoice} - You win!"`
+* Em caso de derrota: 
+`"{playerChoice} vs {computerChoice} - You loose..."`
+
+### 400 Bad Request
+
+Qualquer entrada `int` diferente de 1, 2, 3, 4 ou 5 para o jogador resulta em 400 Bad Request, retornando a string `Uh-Oh! Invalid move. Please choose rock, paper, scissors, lizard or Spock. ò__ó`
+
+
+
 
 
 
